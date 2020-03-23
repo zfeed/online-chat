@@ -1,0 +1,35 @@
+version: '3.7'
+services:
+    chat:
+        build:
+            context: ../../
+            dockerfile: ./docker/development/chat.Dockerfile
+            args:
+                USER_ID: ${DOCKER_USER_ID}
+        volumes:
+            - type: bind
+              source: ../../
+              target: /home/chat/app
+        command: bash -c "npm install && npm run start:dev"
+        ports:
+            - ${DOCKER_CHAT_PORT}:${DOCKER_CHAT_PORT}
+        networks:
+            - application
+        depends_on:
+            - database
+    database:
+        image: mysql:5.7
+        environment:
+            MYSQL_ROOT_PASSWORD: ${DOCKER_MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${DOCKER_MYSQL_DATABASE}
+            MYSQL_USER: ${DOCKER_MYSQL_USER}
+            MYSQL_PASSWORD: ${DOCKER_MYSQL_PASSWORD}
+        networks:
+            - application
+    broker:
+        image: rabbitmq:3.8
+        networks:
+            - application
+networks:
+    application:
+        driver: bridge
