@@ -5,7 +5,7 @@ import {
     ValidationArguments
 } from 'class-validator';
 import { getRepository } from 'typeorm';
-import User from '../../entity/User';
+import User from '../../../core/entity/User';
 
 @ValidatorConstraint({ name: 'isUserIdExists', async: true })
 export default class IsUserIdExistsConstraint

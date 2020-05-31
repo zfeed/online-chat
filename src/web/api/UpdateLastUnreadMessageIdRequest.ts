@@ -1,4 +1,4 @@
-import { IsMessageIdExists, IsInt } from '../validation';
+import { IsMessageIdExists, IsInt } from '../../common/validation';
 
 export default class UpdateLastUnreadMessageIdRequest {
     @IsMessageIdExists()

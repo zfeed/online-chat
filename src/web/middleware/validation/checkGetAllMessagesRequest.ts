@@ -1,5 +1,5 @@
 import { Context, Next } from 'koa';
-import { validate } from '../../validation';
+import { validate } from '../../../common/validation';
 import { GetAllMessagesRequest } from '../../api';
 
 export default async function checkSendMessageRequest(

@@ -4,7 +4,7 @@ import {
     HasNoWhiteSpace,
     IsWord,
     IsUniqueUsername
-} from '../validation';
+} from '../../common/validation';
 
 export default class CreateUserRequest {
     @IsUniqueUsername()

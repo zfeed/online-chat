@@ -1,4 +1,4 @@
-import { IsPositive, Max, IsInt } from '../validation';
+import { IsPositive, Max, IsInt } from '../../common/validation';
 
 export default class GetAllMessagesRequest {
     @IsPositive()

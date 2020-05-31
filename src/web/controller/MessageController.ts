@@ -1,5 +1,5 @@
 import { Context } from 'koa';
-import { MessageService } from '../services';
+import { MessageService } from '../../core/services';
 import { SendMessageRequest, GetAllMessagesRequest } from '../api';
 import NoSessionError from '../error/NoSessionError';
 

@@ -16,7 +16,7 @@ import {
     IsUniqueUsername,
     IsMessageIdExists,
     IsInt
-} from '../validation';
+} from '../../common/validation';
 
 @Entity('users')
 @Unique(['username'])

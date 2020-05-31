@@ -1,5 +1,5 @@
 import { Context } from 'koa';
-import { UserService } from '../services';
+import { UserService } from '../../core/services';
 import NoSessionError from '../error/NoSessionError';
 
 export default class AuthController {

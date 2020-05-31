@@ -4,7 +4,7 @@ import {
     ValidatorConstraintInterface
 } from 'class-validator';
 import { getRepository } from 'typeorm';
-import Message from '../../entity/Message';
+import Message from '../../../core/entity/Message';
 
 @ValidatorConstraint({ name: 'isMessageIdExists', async: true })
 export default class IsMessageIdExistsConstraint

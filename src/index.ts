@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import { createConnection } from 'typeorm'; // eslint-disable-line import/first
-import server from './server'; // eslint-disable-line import/first
+import server from './web/server'; // eslint-disable-line import/first
 
 const {
     DB_DRIVER,

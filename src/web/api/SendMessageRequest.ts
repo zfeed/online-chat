@@ -1,4 +1,4 @@
-import { Length, NotFullyWhiteSpace } from '../validation';
+import { Length, NotFullyWhiteSpace } from '../../common/validation';
 
 export default class SendMessageRequest {
     @NotFullyWhiteSpace()

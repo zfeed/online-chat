@@ -7,7 +7,7 @@ import {
     UpdateDateColumn,
     ManyToOne
 } from 'typeorm';
-import { Length, NotFullyWhiteSpace } from '../validation';
+import { Length, NotFullyWhiteSpace } from '../../common/validation';
 import User from './User';
 
 @Entity('messages')
