@@ -14,10 +14,8 @@ declare global {
 }
 
 declare module 'koa-session' {
-    namespace session {
-        interface Session {
-            user: { id: number; username: string };
-        }
+    interface Session {
+        user: { id: number; username: string };
     }
 }
 
